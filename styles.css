@@ -1,20 +1,56 @@
-body{
+body {
     font-family: 'Barlow', sans-serif;
-    margin:0;
-    }
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-areas: 
+    "header header header header" 
+    "tf tf tf-i tf-i" 
+    "so-i so-i so so" 
+    "gd gd pg pg" 
+    "ct ct ct ct" 
+    "ig1 ig2 ig3 ig4";
+}
 
-h2{
+h1 {
+    text-transform: uppercase;
+}
+
+h1, h2 {
     font-family: 'Fraunces', serif;
 }
-
-.header{
+img{
+    object-fit: contain;
+}
+.header {
+    grid-area: header;
     background-image: url("images/desktop/image-header.jpg");
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
-.transform{
-    display: flex;
-    flex-direction: row-reverse;
+.transform-img{
+    grid-area: tf-i;
 }
-.stand-out{
-    display: flex;
+.transform {
+    grid-area:tf;
 }
+
+.stand-out {
+    grid-area: so;
+}
+.stand-out-img{
+    grid-area:so-i;
+}
+.graphic-design{
+    grid-area: gd;
+}
+.photography{
+    grid-area: pg;
+}
+.testimonials{
+    grid-area: ct;
+}
+.image-gallery1{grid-area: ig1;}
+.image-gallery2{grid-area: ig2;}
+.image-gallery3{grid-area: ig3;}
+.image-gallery4{grid-area: ig4;}
