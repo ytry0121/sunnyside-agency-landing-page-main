@@ -1,70 +1,147 @@
-*{
+:root {
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --dark-desaturated-cyan: hsl(167, 40%, 24%);
+    /* (graphic design text) */
+    --dark-blue: hsl(198, 62%, 26%);
+    /*  (photography text) */
+    --dark-moderate-cyan: hsl(168, 34%, 41%);
+    /*  (footer) */
+    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --dark-grayish-blue: hsl(232, 10%, 55%);
+    --grayish-blue: hsl(210, 4%, 67%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    color: var(--very-dark-desaturated-blue);
     text-align: center;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(4,25%);
-    grid-template-areas: 
-    "header header header header" 
-    "tf tf tf-i tf-i" 
-    "so-i so-i so so" 
-    "gd gd pg pg" 
-    "ct ct ct ct" 
-    "ig1 ig2 ig3 ig4";
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: "header header header header" "tf tf tf-i tf-i" "so-i so-i so so" "gd gd pg pg" "ct ct ct ct" "ig1 ig2 ig3 ig4";
 }
 
 h1 {
     text-transform: uppercase;
+    font-size: 45px;
 }
 
-h1, h2 {
+h1, h2, .contact {
     font-family: 'Fraunces', serif;
 }
-.main_img{
-    height:100%;
-    width:100%;
-    object-fit: cover;
-}
+
 .header {
     grid-area: header;
     /* background-image: url("images/desktop/image-header.jpg"); */
     width: 100%;
     height: 100%;
+    color: white;
 }
-.header_img{
+
+.header_img {
     position: relative;
 }
-.header_contents{
-    position: absolute;
-    top:0;
 
+.header_logo {
+    float: left;
 }
-.transform-img{
+
+.header_contents {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 2em;
+}
+
+.top_nav {
+    float: right;
+    display: flex;
+    width: 40vw;
+    justify-content: space-around;
+}
+
+.nav_item {
+    margin-right: 3em;
+}
+
+.nav_item a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.contact {
+    background-color: var(--white);
+    padding: 15px 20px;
+    border-radius: 40px;
+}
+
+.contact:hover {
+    opacity: 0.5;
+}
+
+.contact a {
+    color: var(--very-dark-desaturated-blue);
+    text-transform: uppercase;
+}
+
+.contact a:hover {
+    color: var(--white);
+}
+
+.main_img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.transform-img {
     grid-area: tf-i;
 }
+
 .transform {
-    grid-area:tf;
+    grid-area: tf;
 }
 
 .stand-out {
     grid-area: so;
 }
-.stand-out-img{
-    grid-area:so-i;
+
+.stand-out-img {
+    grid-area: so-i;
 }
-.graphic-design{
+
+.graphic-design {
     grid-area: gd;
 }
-.photography{
+
+.photography {
     grid-area: pg;
 }
-.testimonials{
+
+.testimonials {
     grid-area: ct;
 }
-.image-gallery1{grid-area: ig1;}
-.image-gallery2{grid-area: ig2;}
-.image-gallery3{grid-area: ig3;}
-.image-gallery4{grid-area: ig4;}
+
+.image-gallery1 {
+    grid-area: ig1;
+}
+
+.image-gallery2 {
+    grid-area: ig2;
+}
+
+.image-gallery3 {
+    grid-area: ig3;
+}
+
+.image-gallery4 {
+    grid-area: ig4;
+}
