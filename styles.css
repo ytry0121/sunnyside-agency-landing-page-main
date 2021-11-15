@@ -16,6 +16,12 @@
 
 * {
     box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -26,16 +32,17 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: repeat(4, 25%);
+    grid-auto-rows: auto;
     grid-template-areas: "header header header header" "tf tf tf-i tf-i" "so-i so-i so so" "gd gd pg pg" "ct ct ct ct" "ig1 ig2 ig3 ig4";
 }
 
 h1 {
     text-transform: uppercase;
     font-size: 45px;
-    margin:5em 0;
+    margin: 5em 0;
 }
 
-h1, h2, .contact {
+h1, h2, h3, .contact {
     font-family: 'Fraunces', serif;
 }
 
@@ -118,6 +125,15 @@ h1, h2, .contact {
     grid-area: so-i;
 }
 
+.second-section {
+    position: relative;
+}
+
+.second-contents {
+    position: absolute;
+    bottom: 5rem;
+}
+
 .graphic-design {
     grid-area: gd;
 }
@@ -127,8 +143,51 @@ h1, h2, .contact {
 }
 
 .testimonials {
+    padding:9.5em 7em 9em;
     grid-area: ct;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 6em 1fr;
+    grid-template-areas: "title title title" "c1 c2 c3";
+    gap: 0 2em;
 }
+
+.testimonials h3 {
+    grid-area: title;
+    color: var(--grayish-blue);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.1em;
+    font-weight: 900;
+}
+.c1{
+    grid-area:c1;
+}
+.c2{
+    grid-area:c2;
+}
+.c3{
+    grid-area:c3;
+}
+.card img{
+    border-radius:50%;
+    width: 4em;
+}
+.card p{
+    color: var(--very-dark-grayish-blue);
+    line-height: 1.8;
+    margin:3em 0 4em;
+}
+.name{
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    margin-bottom:13px;
+}
+.job-title{
+    color:var(--grayish-blue);
+    font-size: 15px;
+}
+
 
 .image-gallery1 {
     grid-area: ig1;
