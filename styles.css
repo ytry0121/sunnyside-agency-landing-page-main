@@ -213,7 +213,9 @@ h1, h2, h3, .contact {
 .footer{
     grid-area: footer;
     color:var(--dark-moderate-cyan);
-    background-color: var(--moderate-cyan);    
+    background-color: var(--moderate-cyan);
+    padding: 5em;   
+    display:grid;
 }
 /* .footer img{
     /* color:var(--dark-moderate-cyan); */
@@ -223,4 +225,9 @@ h1, h2, h3, .contact {
    fill:blue; 
    /* color:red; */
 }
-
+ul{
+    list-style:none ;
+}
+li{
+    display: inline-block;
+}
