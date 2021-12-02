@@ -214,17 +214,14 @@ h1, h2, h3, .contact {
     grid-area: footer;
     color:var(--dark-moderate-cyan);
     background-color: var(--moderate-cyan);
-    padding: 5em;   
+    padding: 4em 0;   
     display:grid;
+    grid-template-rows: 75px 110px 20px;
 }
-/* .footer img{
-    /* color:var(--dark-moderate-cyan); */
-    /* fill:red; */
-/* } */ *
 .footer-logo{
-   fill:blue; 
-   /* color:red; */
+   width:10em;
 }
+
 ul{
     list-style:none ;
 }
