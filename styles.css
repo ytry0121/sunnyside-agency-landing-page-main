@@ -39,7 +39,8 @@ body {
 
 h1 {
     text-transform: uppercase;
-    font-size: 45px;
+    font-size: 55px;
+    letter-spacing: 11px;
     margin: 5em 0;
 }
 
@@ -65,13 +66,15 @@ a {
 
 .header_logo {
     float: left;
+    width:175px;
 }
 
 .header_contents {
     position: absolute;
     top: 0;
     width: 100%;
-    margin: 2em 0;
+    margin-top: 45px;
+    padding: 0 40px;
 }
 
 .top_nav {
@@ -81,7 +84,7 @@ a {
 }
 
 .nav_item {
-    margin-right: 3em;
+    margin-left: 3em;
 }
 
 .nav_item a {
@@ -114,7 +117,7 @@ a {
 }
 
 .first-section {
-    padding: 30px 135px;
+    padding: 160px 135px;
     text-align: left;
 }
 
@@ -183,21 +186,35 @@ a {
 
 .second-contents {
     position: absolute;
-    bottom: 5rem;
+    bottom: 60px;
+    width: 390px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 .second-section h3{
     font-size: 25px;
     font-weight: 900;
+}
+.second-contents p{
+    line-height: 1.5;
+    margin-top:30px;
 }
 
 .graphic-design {
     grid-area: gd;
     color:var(--dark-desaturated-cyan);
 }
+.graphic-design p{
+color: hsl(167, 40%, 37%);
+}
 
 .photography {
     grid-area: pg;
     color:var(--dark-blue);
+}
+.photography p{
+    color:hsl(198, 62%, 30%);
 }
 
 .testimonials {
